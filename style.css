@@ -1,0 +1,26 @@
+body {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.paragraph-styling {
+  margin: 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+.container {
+  background-color: rgba(255, 251, 0, 0.56);
+  height: 400px;
+  width: 400px;
+  padding: 20px;
+  border-radius: 20px;
+  border: 2px solid rgb(255, 230, 0);
+}
+.container h1 {
+  text-align: center;
+}
+.container input {
+  width: 324px;
+  margin-bottom: 30px;
+}
