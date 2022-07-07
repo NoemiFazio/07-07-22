@@ -6,7 +6,16 @@ addBtn.addEventListener("click", function () {
   let paragraph = document.createElement("p");
   paragraph.classList.add("paragraph-styling");
   const newTask = inputField.value;
-  paragraph.innerText = `⨀    ${newTask}`;
+
+  const currentDate = new Date();
+  const orario =
+    currentDate.getHours() +
+    ":" +
+    currentDate.getMinutes() +
+    ":" +
+    currentDate.getSeconds();
+
+  paragraph.innerText = `⨀    ${newTask} -  ${orario}`;
 
   tasksContainer.appendChild(paragraph);
 
@@ -14,7 +23,7 @@ addBtn.addEventListener("click", function () {
 
   paragraph.addEventListener("click", function () {
     paragraph.style.textDecoration = "line-through";
-    paragraph.innerText = `⨂    ${newTask} `;
+    paragraph.innerText = `⨂    ${newTask}  -  ${orario}  `;
   });
   paragraph.addEventListener("dblclick", function () {
     tasksContainer.removeChild(paragraph);
